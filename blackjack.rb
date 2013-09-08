@@ -87,8 +87,11 @@ end
 end
 
 
-if dealertotal == 21 
+if dealertotal == 21 && mytotal < 21
   puts "Sorry, dealer hit Blackjack. You lose."
+  exit
+elsif dealertotal == 21 && mytotal == 21
+  puts "You push, both have Blackjack!"
   exit
 end
 
@@ -104,6 +107,7 @@ while dealertotal < 17
     exit
   elsif dealertotal > 21
     puts "Congratulations, dealer busted! You win!"
+    exit
   end
 
       
